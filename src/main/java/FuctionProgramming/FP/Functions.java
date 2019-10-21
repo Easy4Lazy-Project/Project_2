@@ -1,5 +1,12 @@
 package FuctionProgramming.FP;
 
+import FuctionProgramming.Model.Question;
+
+import java.util.List;
+import java.util.Map;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+
 @FunctionalInterface
 interface TriFunction <U,L,Z,K> {
 
@@ -9,7 +16,7 @@ public class Functions {
 
     //1-user per Month
     //2-questions Per Month
-
+    static Function<List<Question>, Map<Integer,Integer>> questionsPerMonth;
     //3-top Ten Users Vote
     //4-top Ten Users On Question
     //5-Average Of Answers Per Questions
