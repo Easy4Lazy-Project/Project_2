@@ -133,8 +133,16 @@
       <updated>1571685917143</updated>
       <workItem from="1571685921962" duration="606000" />
       <workItem from="1571687047643" duration="98000" />
-      <workItem from="1571687347537" duration="3279000" />
+      <workItem from="1571687347537" duration="3669000" />
     </task>
+    <task id="LOCAL-00001" summary="changed the branch name">
+      <created>1571690680957</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571690680957</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,5 +160,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changed the branch name" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the branch name" />
   </component>
 </project>
