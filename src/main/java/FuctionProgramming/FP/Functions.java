@@ -1,6 +1,7 @@
 package FuctionProgramming.FP;
 
 import FuctionProgramming.Model.Question;
+import FuctionProgramming.Model.User;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -22,9 +23,10 @@ public class Functions {
     //1-user per Month
     //2-questions Per Month
 
-    static Function<List<Question>,List<Pair<LocalDateTime,Long>>> questionsPerMonth =
-            (QuestionList)->  QuestionList.stream()
-                              .map(q->q.getCreationDate())
+    public static Function<List<User>,List<Pair<LocalDateTime,Long>>> questionsPerMonth =
+            (UserList)->  UserList.stream()
+                                .flatMap(u->u.getContentList().stream())
+                                .map(q->q.getCreationDate())
                               .collect(groupingBy(Function.identity(), Collectors.counting())).entrySet().stream()
                               .sorted((e1,e2) ->e2.getKey().compareTo(e1.getKey()))
                                .map(a->new Pair<LocalDateTime,Long>(a.getKey(),a.getValue()))

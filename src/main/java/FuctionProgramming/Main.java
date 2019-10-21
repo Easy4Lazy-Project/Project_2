@@ -1,5 +1,6 @@
 package FuctionProgramming;
 
+import FuctionProgramming.FP.Functions;
 import FuctionProgramming.Model.*;
 
 import java.time.LocalDateTime;
@@ -180,5 +181,6 @@ public class Main {
 
         System.out.print("Test");
 
+       System.out.println( Functions.questionsPerMonth.apply(usersList) );
     }
 }

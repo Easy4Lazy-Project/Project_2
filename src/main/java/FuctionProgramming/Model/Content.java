@@ -25,4 +25,6 @@ public  abstract class  Content {
 
     public abstract List<Vote> getVoteList();
 
+    public abstract LocalDateTime getCreationDate();
+
 }
