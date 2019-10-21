@@ -15,7 +15,7 @@ public class Question extends Content {
         this.title = title;
         super.body=body;
         super.tags=tags;
-        super.creationDate=   creationDate;
+        super.creationDate= creationDate;
         super.user=user;
 
     }
@@ -47,4 +47,9 @@ public class Question extends Content {
     public List<Vote> getVoteList() {
         return voteList;
     }
+
+    public LocalDateTime getCreationDate() {
+        return super.creationDate;
+    }
+
 }
