@@ -39,8 +39,19 @@ public class Functions {
                                .collect(Collectors.toList());
 
     //3-top Ten Users Vote
-    public static Function<List<Vote>, List<Pair<User,Long>>> getTopTenUsersByVote = (votes) ->
-            votes
+    //get vote list from user list
+    public static Function<List<User>, List<Vote>> getVotesFromUserList = (users) ->
+            users.stream()
+                    .filter(u -> u.getContentList()!=null)
+                    .flatMap(u-> u.getContentList().stream())
+                    .filter(c -> c.getAnswerList() != null)
+                    .flatMap(c -> c.getAnswerList().stream())
+                    .filter(a -> a.getVoteList() != null)
+                    .flatMap(a -> a.getVoteList().stream())
+                    .collect(Collectors.toList());
+
+    public static Function<List<User>, List<Pair<User,Long>>> getTopTenUsersByVote = (users) ->
+            Functions.getVotesFromUserList.apply(users)
                     .stream()
                     .collect(Collectors.groupingBy(Vote::getUser, counting()))
                     .entrySet().stream()
@@ -58,27 +69,37 @@ public class Functions {
     //9-Moderate (Repeated)
     //10-top K Questions by vote
     //11- Top K tags
-    public static BiFunction<List<Question>, Integer, List<String>> getKTags = (ques,k) ->
-            ques
+    //get vote list from user list
+    public static Function<List<User>, List<Content>> getQuesFromUserList = (users) ->
+            users.stream()
+                    .filter(u -> u.getContentList() != null)
+                    .flatMap(u->u.getContentList().stream())
+                    .collect(Collectors.toList());
+    public static BiFunction<List<User>, Integer, List<String>> getKTags = (users,k) ->
+            Functions.getQuesFromUserList.apply(users)
             .stream()
             .map(Content::getTags)
             .flatMap(t -> Arrays.stream(t.split(",")))
             .collect(groupingBy(Function.identity(), counting()))
-            .keySet().stream()
+                    .entrySet().stream()
+                    .sorted((c1,c2)-> (int) (c2.getValue() - c1.getValue()))
+            .map(c -> c.getKey())
             .limit(k)
             .collect(Collectors.toList());
     //12- Answer Per Month
     //13-Comment Per Month
     //14-Search
-    static List<String> stopWords = List.of("of","the","we","are");
-    public static BiFunction<List<Question>, String, List<Question>> search = (ques, searchString) ->
-            ques.stream()
-            .filter(q -> Functions.isFound.apply(q.getTitle(),Functions.searchStrRegex.apply(searchString)))
-            .filter(q -> Functions.isFound.apply(q.getBody(),Functions.searchStrRegex.apply(searchString)))
+    // Search returns any possible search string
+    public static List<String> stopWords = Arrays.asList("of","the","we","are","[]","(",")");
+    public static BiFunction<List<User>, String, List<Content>> search = (users, searchString) ->
+            Functions.getQuesFromUserList.apply(users).stream()
+            .filter(q -> Functions.isFound.apply(q.getTitle(),Functions.searchStrRegex.apply(searchString)) ||
+                    Functions.isFound.apply(q.getBody(),Functions.searchStrRegex.apply(searchString)))
+           // .filter(q -> Functions.isFound.apply(q.getBody(),Functions.searchStrRegex.apply(searchString)))
             .collect(Collectors.toList());
 
-    static Function<String, String> searchStrRegex = (searchStr) -> ".*".concat(Stream.of(searchStr.split(" ")).filter(w -> !stopWords.contains(w)).collect(Collectors.joining(".*")));
-    static BiFunction<String, String, Boolean> isFound = (strToSearch, searchStr) -> Pattern.compile(searchStr).matcher(strToSearch).find();
+    public static Function<String, String> searchStrRegex = (searchStr) -> Stream.of(searchStr.split(" ")).filter(w -> !stopWords.contains(w)).collect(Collectors.joining("|"));
+    public static BiFunction<String, String, Boolean> isFound = (strToSearch, searchStr) -> Pattern.compile(searchStr).matcher(strToSearch).find();
 
 
      //15-My Top K Questions

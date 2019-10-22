@@ -52,4 +52,12 @@ public class Question extends Content {
         return super.creationDate;
     }
 
+    @Override
+    public String toString() {
+        return "Question{" +
+                "title='" + title + '\'' +
+                ", body='" + body + '\'' +
+                ", tags='" + tags + '\'' +
+                '}';
+    }
 }

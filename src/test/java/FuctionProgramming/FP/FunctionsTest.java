@@ -4,13 +4,13 @@ package FuctionProgramming.FP;
 import FuctionProgramming.Model.*;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
+
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 
 public class FunctionsTest {
@@ -190,7 +190,27 @@ public class FunctionsTest {
     public void questionsPerMonthTest(){
 
         String expected ="[Pair{key=2019-11-10T00:00, value=1}, Pair{key=2019-09-10T00:00, value=4}, Pair{key=2019-08-10T00:00, value=3}, Pair{key=2019-07-10T00:00, value=1}, Pair{key=2019-06-10T00:00, value=1}, Pair{key=2019-05-12T00:00, value=1}, Pair{key=2019-04-12T00:00, value=1}, Pair{key=2019-03-12T00:00, value=1}, Pair{key=2019-02-12T00:00, value=1}, Pair{key=2019-01-10T00:00, value=1}]";
-
         assertEquals("Test get Question Answers ",Functions.questionsPerMonth.apply(usersList),expected);
+    }
+
+    @Test
+    public void getTopTenUsersByVoteTest(){
+
+        String expected ="[Pair{key=Adeleke, value=9}, Pair{key=Dany, value=9}, Pair{key=Ali, value=9}, Pair{key=Eduardo, value=7}]";
+        assertEquals("Test get Question Answers ",Functions.getTopTenUsersByVote.apply(usersList),expected);
+    }
+
+    @Test
+    public void getTopKTagsTest(){
+
+        String expected ="[localdatetime, spring, angular, hibernate, docker, binary java]";
+        assertEquals("Test get Question Answers ",Functions.getKTags.apply(usersList,7),expected);
+    }
+
+    @Test
+    public void searchTest(){
+
+        String expected ="[]";
+        assertEquals("Test search() ",Functions.search.apply(usersList,"[]"),expected);
     }
 }

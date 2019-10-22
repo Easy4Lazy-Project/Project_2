@@ -181,9 +181,20 @@ public class Main {
 
         System.out.print("Test");
 
-       System.out.println( Functions.questionsPerMonth.apply(usersList) );
+       //System.out.println( Functions.questionsPerMonth.apply(usersList) );
 
        //testing getUserByVotes
-        //System.out.println(Functions.getTopTenUsersByVote)
+        System.out.println("****\tGet Top Ten Users By Votes\t******");
+        System.out.println(Functions.getTopTenUsersByVote.apply(usersList));
+
+        //testing getUserByVotes
+        System.out.println("****\tGet Top Ten Tags\t******");
+        System.out.println(Functions.getKTags.apply(usersList,7));
+
+        //testing getUserByVotes
+        System.out.println("****\tGet Search\t******");
+        System.out.println(Functions.search.apply(usersList," search "));
+        //System.out.println(Functions.searchStrRegex.apply("binary search"));
+        //System.out.println(Functions.isFound.apply("body for binary search",Functions.searchStrRegex.apply("search")));
     }
 }
