@@ -95,7 +95,7 @@ public class Main {
 
         contentListU4.add(new Question(
                 "Question 1 user Ali",
-                "body for binary search",
+                "@heloo  heloo  heloo @heloo @heloo",
                 "hibernate",
                 LocalDateTime.of(2019, 9, 10, 0, 0), u4));
 
@@ -182,7 +182,7 @@ public class Main {
 
         System.out.print("Test");
 
-        System.out.println(Functions.questionsPerDate.apply(usersList));
+        System.out.println(Functions.questionsPerDate.apply(usersList).size());
 
         System.out.println("----------------------------------------------");
 
@@ -191,7 +191,9 @@ public class Main {
 
         System.out.println("----------------------------------------------");
 
-        System.out.println(Functions.ModerateRepeatedWord.apply("@heloo  heloo  heloo @heloo @heloo" ));
+       // System.out.println(Functions.moderateBadRepeatedWord.apply("@heloo  heloo  heloo @heloo @heloo" ));
+
+        System.out.println(Functions.ModerateRepeatedWordFormContent.apply(contentListU4.get(1)));
 
         System.out.println(Functions.ModerateRepeatedWordFormContent.apply(contentListU4.get(1)));
     }

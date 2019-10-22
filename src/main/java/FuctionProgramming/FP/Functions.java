@@ -27,12 +27,12 @@ public class Functions  {
 
     public static Function<List<User>,List<Pair<LocalDateTime,Long>>> questionsPerDate =
             (UserList)->  UserList.stream()
-                                .flatMap(u->u.getContentList().stream())
-                                .map(q->q.getCreationDate())
-                              .collect(groupingBy(Function.identity(), Collectors.counting())).entrySet().stream()
-                              .sorted((e1,e2) ->e2.getKey().compareTo(e1.getKey()))
-                               .map(a-> new Pair<>(a.getKey(), a.getValue()))
-                               .collect(Collectors.toList());
+                    .flatMap(u->u.getContentList().stream())
+                    .map(q->q.getCreationDate())
+                    .collect(groupingBy(Function.identity(), Collectors.counting())).entrySet().stream()
+                    .sorted((e1,e2) ->e2.getKey().compareTo(e1.getKey()))
+                    .map(a-> new Pair<>(a.getKey(), a.getValue()))
+                    .collect(Collectors.toList());
 
     //3-top Ten Users Vote
     //4-top Ten Users On Question
@@ -44,7 +44,7 @@ public class Functions  {
     public static BiFunction<Content, Set<String>, Content > ModerateBadWordFromContent =
             (content,setOfWord) ->List.of(content).stream()
                     .map(p-> new Question(p.getTitle(),Functions.ModerateBadWord.apply(p.getBody(),setOfWord) , p.getTags(), p.getCreationDate(), p.getUser()))
-                     .map(s->(Content)s)
+                    .map(s->(Content)s)
                     .findFirst()
                     .get();
 
@@ -66,7 +66,7 @@ public class Functions  {
     public static Function< String , String > ModerateRepeatedWord=
             (c)->List.of(c).stream()
                     .flatMap(a->Arrays.stream(a.split(" ")))
-                     .flatMap(s->Arrays.stream(s.split("@",1 )))
+                    .flatMap(s->Arrays.stream(s.split("@",1 )))
                     .distinct()
                     .collect(Collectors.joining(" "));
 
