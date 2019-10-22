@@ -2,9 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9964b2cc-f15a-42d3-ab11-f86e493e948c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/FuctionProgramming/FP/FunctionsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/FP/Functions.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/FP/Functions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Content.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Content.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/FP/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/FP/Functions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Model/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Model/Content.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Model/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FuctionProgramming/FP/FunctionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FuctionProgramming/FP/FunctionsTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +98,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.FunctionsTest.questionsPerDateTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FuctionProgramming.Main" />
       <module name="untitled1.main" />
@@ -96,8 +112,92 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FunctionsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.FunctionsTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="FunctionsTest.ModerateBadContentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.FunctionsTest.ModerateBadContentTest&quot; --debug" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="FunctionsTest.ModerateBadWordforContentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.FunctionsTest.ModerateBadWordforContentTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="FunctionsTest.questionsPerDateTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.FunctionsTest.questionsPerDateTest&quot; --stacktrace" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.FunctionsTest.questionsPerDateTest" />
+        <item itemvalue="Gradle.FunctionsTest" />
+        <item itemvalue="Gradle.FunctionsTest.ModerateBadContentTest" />
+        <item itemvalue="Gradle.FunctionsTest.ModerateBadWordforContentTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -120,7 +220,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571685917143</updated>
-      <workItem from="1571685921962" duration="7764000" />
+      <workItem from="1571685921962" duration="18347000" />
+      <workItem from="1571749099560" duration="346000" />
     </task>
     <task id="LOCAL-00001" summary="first Commit">
       <created>1571687336391</created>
@@ -150,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571692668182</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Committing first function  by hedra with testing">
+      <created>1571694002800</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571694002800</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +269,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -172,6 +282,7 @@
     <MESSAGE value="Committing first function and gitignore" />
     <MESSAGE value="Committing first function  Hedra" />
     <MESSAGE value="Committing first function  by hedra done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Committing first function  by hedra done" />
+    <MESSAGE value="Committing first function  by hedra with testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Committing first function  by hedra with testing" />
   </component>
 </project>
