@@ -182,5 +182,8 @@ public class Main {
         System.out.print("Test");
 
        System.out.println( Functions.questionsPerMonth.apply(usersList) );
+
+       //testing getUserByVotes
+        //System.out.println(Functions.getTopTenUsersByVote)
     }
 }

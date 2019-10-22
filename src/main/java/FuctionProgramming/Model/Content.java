@@ -27,4 +27,15 @@ public  abstract class  Content {
 
     public abstract LocalDateTime getCreationDate();
 
+    public String getTags() {
+        return tags;
+    }
+
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
+
+    public String getBody() {
+        return body;
+    }
 }

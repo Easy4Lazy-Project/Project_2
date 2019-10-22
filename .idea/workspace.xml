@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9964b2cc-f15a-42d3-ab11-f86e493e948c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/FuctionProgramming/FP/FunctionsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/FP/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/FP/Functions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Model/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Model/Content.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +162,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
