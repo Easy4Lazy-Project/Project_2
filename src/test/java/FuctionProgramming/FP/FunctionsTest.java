@@ -9,13 +9,17 @@ import org.junit.runner.RunWith;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 
 public class FunctionsTest {
+    List<Content> questionsList = new ArrayList<>();
     List<User> usersList = new ArrayList<>();
+    List<Content> contentListU1 = new ArrayList<>();
 
     @Before
     public void setUp() throws Exception {
@@ -183,17 +187,82 @@ public class FunctionsTest {
 
         contentListU1.get(0).setAnswerList(ans1);
         contentListU1.get(1).setAnswerList(ans2);
-
+        questionsList.addAll(contentListU1);
         //end population lists
     }
 
     @Test
     public void questionsPerDateTest(){
 
-    //    String expected ="[Pair{key=2019-11-10T00:00, value=1}, Pair{key=2019-09-10T00:00, value=4}, Pair{key=2019-08-10T00:00, value=3}, Pair{key=2019-07-10T00:00, value=1}, Pair{key=2019-06-10T00:00, value=1}, Pair{key=2019-05-12T00:00, value=1}, Pair{key=2019-04-12T00:00, value=1}, Pair{key=2019-03-12T00:00, value=1}, Pair{key=2019-02-12T00:00, value=1}, Pair{key=2019-01-10T00:00, value=1}]";
+        //    String expected ="[Pair{key=2019-11-10T00:00, value=1}, Pair{key=2019-09-10T00:00, value=4}, Pair{key=2019-08-10T00:00, value=3}, Pair{key=2019-07-10T00:00, value=1}, Pair{key=2019-06-10T00:00, value=1}, Pair{key=2019-05-12T00:00, value=1}, Pair{key=2019-04-12T00:00, value=1}, Pair{key=2019-03-12T00:00, value=1}, Pair{key=2019-02-12T00:00, value=1}, Pair{key=2019-01-10T00:00, value=1}]";
 
 
-       assertEquals("Test get Question Answers ",Functions.questionsPerDate.apply(usersList).size(),10);
+        assertEquals("questions Per Date ",Functions.questionsPerDate.apply(usersList).size(),10);
         //Assert.assertTrue(true);
+
     }
+
+    @Test
+    public void ModerateBadWordFromContentTest(){
+
+        User u1 = new User("Hedra","","hedra@mum.edu","12345",
+                LocalDateTime.of(2019,3,10,1,1), null);
+        Content c1=new Question(
+                "how to inicialize localdatetime in body",
+                "body for localdatetime",
+                "localdatetime",
+                LocalDateTime.of(2019,02,12,0,0),u1);
+        Set setA = new HashSet();
+        setA.add("body");
+
+        Content cTest=  Functions.ModerateBadWordFromContent.apply(c1, setA);
+
+
+        Assert.assertTrue(!cTest.getBody().equals(c1.getBody()));
+        Assert.assertTrue(cTest.getTitle().equals("how to inicialize localdatetime in"));
+    }
+
+
+    @Test
+    public void ModerateRepeatedWordFormContentTest(){
+        User u1 = new User("Hedra","","hedra@mum.edu","12345",
+                LocalDateTime.of(2019,3,10,1,1), null);
+        Content c1=new Question(
+                "how @binary @hedra @hedra",
+                "body for @binary @binary search body",
+                "localdatetime",
+                LocalDateTime.of(2019,02,12,0,0),u1);
+
+
+        Content cTest=  Functions.ModerateRepeatedWordFormContent.apply(c1);
+
+
+        Assert.assertTrue(!cTest.getBody().equals(c1.getBody()));
+        assertEquals("how @binary @hedra",cTest.getTitle());
+    }
+    //Dany's Tests
+    @Test
+    public void usersPerMonthTest(){
+
+        String expected ="[Pair{key=2019-07, value=1}, Pair{key=2019-05, value=1}, Pair{key=2019-03, value=1}, Pair{key=2019-02, value=1}, Pair{key=2019-01, value=1}]";
+
+        assertEquals("Test get users created per month ",Functions.newUsersPerMonth.apply(usersList).toString(),expected);
+    }
+
+    @Test
+    public void averageQuestionsPerAnswer(){
+
+        double expected = 1.0;
+
+        assertEquals("Test get average questions per answer ", java.util.Optional.ofNullable(Functions.averageQuestionsPerAnswer.apply(questionsList)),java.util.Optional.ofNullable(expected));
+    }
+
+    @Test
+    public void answersPerMonth(){
+
+        String expected ="[Pair{key=2019-02, value=5}, Pair{key=2019-01, value=4}]";
+
+        assertEquals("Test get answers posted per month ",Functions.answersPerMonth.apply(questionsList).toString(),expected);
+    }
+    //End Dany
 }

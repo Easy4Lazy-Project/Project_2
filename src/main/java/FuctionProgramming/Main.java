@@ -4,10 +4,8 @@ import FuctionProgramming.FP.Functions;
 import FuctionProgramming.Model.*;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
+import java.util.function.Function;
 
 public class Main {
 
@@ -29,7 +27,7 @@ public class Main {
 
         contentListU1.add(new Question(
                 "Binary Search in Java",
-                "body for binary search",
+                "body body for binary search",
                 "binary java",
                 LocalDateTime.of(2019,01,10,0,0),u1));
 
@@ -208,7 +206,7 @@ public class Main {
         contentListU1.get(1).setAnswerList(ans2);
 
 
-        List<Content> AllContent = new ArrayList<>();
+        List<Content> AllContent = new ArrayList<Content>();
         for(int i=0; i<contentListU1.size();i++){
             AllContent.add(contentListU1.get(i));
         }
@@ -245,15 +243,15 @@ public class Main {
         System.out.println("----------------------------------------------");
 
         System.out.println(contentListU4.get(1));
-        System.out.println(Functions.ModerateBadWordFromContent.apply(contentListU4.get(1), Set.of("search", "H")));
+//        System.out.println(Functions.ModerateBadWordFromContent.apply(contentListU4.get(1), Set.of("search", "H")));
 
         System.out.println("----------------------------------------------");
 
        // System.out.println(Functions.moderateBadRepeatedWord.apply("@heloo  heloo  heloo @heloo @heloo" ));
 
-        System.out.println(Functions.ModerateRepeatedWordFormContent.apply(contentListU4.get(1)));
+       // System.out.println(Functions.ModerateRepeatedWordFormContent.apply(contentListU4.get(1)));
 
-        System.out.println(Functions.ModerateRepeatedWordFormContent.apply(contentListU4.get(1)));
+        //System.out.println(Functions.ModerateRepeatedWordFormContent.apply(contentListU4.get(1)));
 
 
         //CLI
@@ -278,33 +276,61 @@ public class Main {
         int option = scanner.nextInt();
         switch (option) {
             case 1:
+                System.out.println(Functions.newUsersPerMonth.apply(usersList));
                 break;
             case 2:
                 System.out.println(Functions.questionsPerDate.apply(usersList));
                 break;
             case 3:
+                System.out.println(Functions.getVotesFromUserList.apply(usersList));
                 break;
             case 4:
                 break;
             case 5:
+                System.out.println(Functions.totalNumberOfAnswers.apply(AllContent));
+
                 break;
             case 6:
                 break;
             case 7:
+                System.out.println(Functions.AverageofAnswersPerUserPerMonth.apply(usersList,AllContent));
                 break;
             case 8:
+                Set setA = new HashSet();
+                setA.add("binary");
+                System.out.println("Using 'binary' as example of a bad question");
+                System.out.println(AllContent.get(0).getBody());
+                System.out.println(Functions.ModerateBadWordFromContent.apply(AllContent.get(0),setA).getBody());
+
                 break;
             case 9:
+                System.out.println(AllContent.get(0).getBody());
+                System.out.println(Functions.ModerateRepeatedWordFormContent.apply(AllContent.get(0)).getBody());
+
                 break;
             case 10:
                 break;
             case 11:
+                System.out.println(Functions.getKTags.apply(usersList,5));
                 break;
             case 12:
+                System.out.println(Functions.answersPerMonth.apply(AllContent));
+
                 break;
             case 13:
+                //List<User>,Integer year
+                for(int i =0; i<usersList.size();i++){
+                    for(int j=0;j<usersList.get(i).getContentList().size();j++){
+                        for(int h=0;h<usersList.get(i).getContentList().get(j).getCommentList().size();h++){
+                            System.out.println(usersList.get(i).getContentList().get(j).getCommentList().get(h).getCreationDate());
+                        }
+                    }
+                }
+                System.out.println(Functions.CommentsPerMonth.apply(usersList,2019));
                 break;
             case 14:
+                System.out.println("looking for word 'binary'");
+                System.out.println(Functions.search.apply(usersList,"binary"));
                 break;
             case 15:
                 System.out.println(Functions.TopKQuestionsUser.apply(u1,10));
