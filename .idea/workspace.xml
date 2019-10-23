@@ -10,22 +10,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/FP/Functions.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/FP/Functions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/FP/triFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/FP/triFunction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Answer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Answer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Content.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Content.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Question.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Vote.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Vote.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/FP/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/FP/Functions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FuctionProgramming/FP/FunctionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FuctionProgramming/FP/FunctionsTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,6 +158,26 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Tests in 'FuctionProgramming.FP'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.*&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="Tests in 'untitled1.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -187,21 +198,13 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="All in Project_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project_2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'untitled1.test'" />
+        <item itemvalue="Gradle.Tests in 'FuctionProgramming.FP'" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.CommentsPerMonthTest.commentsPerMonthTest" />
         <item itemvalue="Gradle.AverageofAnswersPerUserPerMonthTest" />
-        <item itemvalue="JUnit.All in Project_2" />
       </list>
     </recent_temporary>
   </component>
@@ -224,6 +227,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571685917143</updated>
       <workItem from="1571685921962" duration="6404000" />
+      <workItem from="1571864871432" duration="2502000" />
     </task>
     <task id="LOCAL-00001" summary="first Commit">
       <created>1571687336391</created>
