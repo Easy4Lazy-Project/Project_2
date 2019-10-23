@@ -104,7 +104,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.Tests in 'untitled1.test'">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FuctionProgramming.Main" />
       <module name="untitled1.main" />
@@ -118,12 +118,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FunctionsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FunctionsTest.ModerateBadWordFromContentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.FunctionsTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.FunctionsTest.ModerateBadWordFromContentTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="FunctionsTest.ModerateRepeatedWordFormContentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.FunctionsTest.ModerateRepeatedWordFormContentTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -144,26 +164,6 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.FunctionsTest.questionsPerDateTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="FunctionsTest.questionsPerMonthTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.FunctionsTest.questionsPerMonthTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -201,10 +201,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'untitled1.test'" />
-        <item itemvalue="Gradle.FunctionsTest.questionsPerDateTest" />
-        <item itemvalue="Gradle.FunctionsTest.questionsPerMonthTest" />
-        <item itemvalue="Gradle.FunctionsTest" />
+        <item itemvalue="Gradle.FunctionsTest.ModerateRepeatedWordFormContentTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.FunctionsTest.ModerateBadWordFromContentTest" />
+        <item itemvalue="Gradle.FunctionsTest.questionsPerDateTest" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +227,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571685917143</updated>
       <workItem from="1571685921962" duration="7764000" />
-      <workItem from="1571759073034" duration="6973000" />
+      <workItem from="1571759073034" duration="15925000" />
     </task>
     <task id="LOCAL-00001" summary="first Commit">
       <created>1571687336391</created>
@@ -257,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571692668182</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Committing first function  by hedra done done">
+      <created>1571773754189</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571773754189</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +288,10 @@
     <MESSAGE value="Committing first function and gitignore" />
     <MESSAGE value="Committing first function  Hedra" />
     <MESSAGE value="Committing first function  by hedra done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Committing first function  by hedra done" />
+    <MESSAGE value="Committing first function  by hedra done done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Committing first function  by hedra done done" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/untitled1$Tests_in__untitled1_test_.ic" NAME="Tests in 'untitled1.test' Coverage Results" MODIFIED="1571781329656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

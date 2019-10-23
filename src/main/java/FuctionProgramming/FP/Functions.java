@@ -43,13 +43,13 @@ public class Functions  {
 
     public static BiFunction<Content, Set<String>, Content > ModerateBadWordFromContent =
             (content,setOfWord) ->List.of(content).stream()
-                    .map(p-> new Question(p.getTitle(),Functions.ModerateBadWord.apply(p.getBody(),setOfWord) , p.getTags(), p.getCreationDate(), p.getUser()))
+                    .map(p-> new Question(Functions.ModerateBadWord.apply(p.getTitle(),setOfWord),Functions.ModerateBadWord.apply(p.getBody(),setOfWord) , p.getTags(), p.getCreationDate(), p.getUser()))
                     .map(s->(Content)s)
                     .findFirst()
                     .get();
 
 
-    public static BiFunction< String , Set<String>, String > ModerateBadWord=
+    private static BiFunction< String , Set<String>, String > ModerateBadWord=
             (content,setOfWord) ->List.of(content).stream()
                     .flatMap(s-> Arrays.stream(s.split(" ")))
                     .filter(a->! setOfWord.contains(a))
@@ -58,7 +58,7 @@ public class Functions  {
     //9-Moderate (Repeated)
     public static Function<Content,  Content > ModerateRepeatedWordFormContent =
             (content ) ->List.of(content).stream()
-                    .map(p-> new Question(p.getTitle(),Functions.ModerateRepeatedWord.apply(p.getBody()) , p.getTags(), p.getCreationDate(), p.getUser()))
+                    .map(p-> new Question(Functions.ModerateRepeatedWord.apply(p.getTitle()),Functions.ModerateRepeatedWord.apply(p.getBody()) , p.getTags(), p.getCreationDate(), p.getUser()))
                     .map(s->(Content)s)
                     .findFirst()
                     .get();
