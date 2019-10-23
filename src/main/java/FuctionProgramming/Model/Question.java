@@ -1,6 +1,7 @@
 package FuctionProgramming.Model;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Question extends Content {
@@ -17,6 +18,8 @@ public class Question extends Content {
         super.tags=tags;
         super.creationDate= creationDate;
         super.user=user;
+        this.answerList = new ArrayList<>();
+        this.commentList = new ArrayList<>();
 
     }
 
@@ -50,6 +53,9 @@ public class Question extends Content {
 
     public LocalDateTime getCreationDate() {
         return super.creationDate;
+    }
+    public int getCreationMonth(){
+        return this.getCreationDate().getMonthValue();
     }
 
     @Override

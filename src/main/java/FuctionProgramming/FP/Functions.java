@@ -1,10 +1,13 @@
 package FuctionProgramming.FP;
 
+import FuctionProgramming.Model.*;
 import FuctionProgramming.Model.Content;
 import FuctionProgramming.Model.Question;
 import FuctionProgramming.Model.User;
 
 import java.time.LocalDateTime;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
@@ -39,6 +42,12 @@ public class Functions  {
     //5-Average Of Answers Per Questions
     //6-Questions Without Answers
     //7-Average Of Answers Per User Per Month
+    public static BiFunction<List<User>,List<Content>, List<Pair<Integer,Long>>> AverageofAnswersPerUserPerMonth =
+            (users, content) -> content.stream()
+                .flatMap(c -> c.getAnswerList().stream())
+                .collect(groupingBy(Answer::getCreationMonth, Collectors.counting())).entrySet().stream()
+            .map(a-> new Pair<Integer,Long>(a.getKey(),(a.getValue()/users.size())))
+            .collect(Collectors.toList());
     //8-Moderate on Bad Word
 
     public static BiFunction<Content, Set<String>, Content > ModerateBadWordFromContent =
@@ -75,7 +84,37 @@ public class Functions  {
     //11- Top K tags
     //12- Answer Per Month
     //13-Comment Per Month
+    public static BiFunction<List<User>,Integer, List<Pair<Integer,Long>>> CommentsPerMonth =
+            (users, year) -> users.stream()
+                            .flatMap(q -> q.getContentList().stream())
+                            .flatMap(c->c.getCommentList().stream())
+                            .filter(c -> c != null)
+                            .filter(q-> q.getCreationDate().getYear() == year)
+            .collect(groupingBy(Comment::getCreationMonth,
+                    Collectors.counting())).entrySet().stream()
+            .map(q -> new Pair<Integer,Long>(q.getKey(), q.getValue()))
+            .collect(Collectors.toList());
+
+     /*                       .map(q -> new HashMap<Integer,Content>(){{
+                                put(q.getCreationDate().getMonthValue(),q);
+                            }}.entrySet().stream().findFirst().get())
+            .map(q-> q.getValue())
+
+      */
     //14-Search
     //15-My Top K Questions
+    public static BiFunction<User,Integer, List<Pair<Content,Integer>>> TopKQuestionsUser =
+            (user, k) -> user.getContentList().stream()
+                    .map(c -> new Pair<Content,Integer>(c, c.getVoteList().stream()
+                            .map(v -> v.getVote())
+                            .reduce((v1,v2) -> v1+v2).get()
+                    )
+
+                    ).collect(Collectors.toList())
+                    .stream()
+                    .sorted(new PairQuestionComparator())
+                    .limit(k)
+                    .collect(Collectors.toList());
+
 }
 

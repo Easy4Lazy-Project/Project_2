@@ -39,5 +39,8 @@ public  abstract class  Content {
 
     public abstract LocalDateTime getCreationDate();
 
-    public abstract void setBody(String apply);
+    public abstract int getCreationMonth();
+
+    public abstract void setBody(String body);
+
 }
