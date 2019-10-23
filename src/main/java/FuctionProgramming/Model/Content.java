@@ -25,19 +25,20 @@ public  abstract class  Content {
 
     public abstract List<Vote> getVoteList();
 
-    public String getBody() {
-        return body;
-    }
+    public abstract LocalDateTime getCreationDate();
 
     public String getTags() {
         return tags;
     }
 
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
     public User getUser() {
         return user;
     }
-
-    public abstract LocalDateTime getCreationDate();
-
+    public String getBody() {
+        return body;
+    }
     public abstract void setBody(String apply);
 }

@@ -30,29 +30,29 @@ public class Main {
                 "Binary Search in Java",
                 "body for binary search",
                 "binary java",
-                LocalDateTime.of(2019, 01, 10, 0, 0), u1));
+                LocalDateTime.of(2019,01,10,0,0),u1));
 
         contentListU1.add(new Question(
                 "how to inicialize localdatetime",
                 "body for localdatetime",
                 "localdatetime",
-                LocalDateTime.of(2019, 02, 12, 0, 0), u1));
+                LocalDateTime.of(2019,02,12,0,0),u1));
 
         contentListU1.add(new Question(
                 "Question 3",
                 "body 3",
                 "localdatetime",
-                LocalDateTime.of(2019, 03, 12, 0, 0), u1));
+                LocalDateTime.of(2019,03,12,0,0),u1));
         contentListU1.add(new Question(
                 "Question 4",
                 "body for 4",
                 "localdatetime",
-                LocalDateTime.of(2019, 04, 12, 0, 0), u1));
+                LocalDateTime.of(2019,04,12,0,0),u1));
         contentListU1.add(new Question(
                 "Question 5",
                 "body for 5",
                 "localdatetime",
-                LocalDateTime.of(2019, 05, 12, 0, 0), u1));
+                LocalDateTime.of(2019,05,12,0,0),u1));
 
         List<Content> contentListU2 = new ArrayList<Content>();
 
@@ -89,7 +89,7 @@ public class Main {
                 "Question 3 user Adeleke",
                 "body for binary search",
                 "spring",
-                LocalDateTime.of(2019, 9, 10, 0, 0), u3));
+                LocalDateTime.of(2019,9,10,0,0),u3));
 
         List<Content> contentListU4 = new ArrayList<Content>();
 
@@ -133,46 +133,46 @@ public class Main {
         usersList.add(u5);
 
         //answers part
-        List<Vote> votes1 = new ArrayList<Vote>() {{
-            add(new Vote(1, u2));
-            add(new Vote(1, u3));
-            add(new Vote(1, u4));
-            add(new Vote(1, u5));
+        List<Vote> votes1 = new ArrayList<Vote>(){{
+           add(new Vote(1,u2));
+            add(new Vote(1,u3));
+            add(new Vote(1,u4));
+            add(new Vote(1,u5));
         }};
-        List<Vote> votes2 = new ArrayList<Vote>() {{
-            add(new Vote(-1, u2));
-            add(new Vote(1, u3));
-            add(new Vote(-1, u4));
-            add(new Vote(1, u5));
+        List<Vote> votes2 = new ArrayList<Vote>(){{
+            add(new Vote(-1,u2));
+            add(new Vote(1,u3));
+            add(new Vote(-1,u4));
+            add(new Vote(1,u5));
         }};
-        List<Vote> votes3 = new ArrayList<Vote>() {{
-            add(new Vote(1, u3));
-            add(new Vote(1, u4));
-            add(new Vote(1, u5));
-        }};
-
-        List<Answer> ans1 = new ArrayList<Answer>() {{
-            add(new Answer("Answer #1 ", "",
-                    LocalDateTime.of(2019, 01, 10, 9, 2), u2, votes1));
-            add(new Answer("Answer #2 ", "",
-                    LocalDateTime.of(2019, 01, 10, 9, 2), u3, votes2));
-            add(new Answer("Answer #3 ", "",
-                    LocalDateTime.of(2019, 02, 10, 9, 2), u4, votes3));
+        List<Vote> votes3 = new ArrayList<Vote>(){{
+            add(new Vote(1,u3));
+            add(new Vote(1,u4));
+            add(new Vote(1,u5));
         }};
 
-        List<Answer> ans2 = new ArrayList<Answer>() {{
-            add(new Answer("Answer #1 ", "",
-                    LocalDateTime.of(2019, 01, 10, 9, 2), u2, votes2));
-            add(new Answer("Answer #2 ", "",
-                    LocalDateTime.of(2019, 01, 10, 9, 2), u3, votes1));
-            add(new Answer("Answer #3 ", "",
-                    LocalDateTime.of(2019, 02, 10, 9, 2), u4, votes3));
-            add(new Answer("Answer #4 ", "",
-                    LocalDateTime.of(2019, 02, 10, 9, 2), u5, votes1));
-            add(new Answer("Answer #5 ", "",
-                    LocalDateTime.of(2019, 02, 10, 9, 2), u5, votes1));
-            add(new Answer("Answer #6 ", "",
-                    LocalDateTime.of(2019, 02, 10, 9, 2), u5, votes1));
+        List<Answer> ans1 = new ArrayList<Answer>(){{
+            add(new Answer("Answer #1 ","",
+                LocalDateTime.of(2019,01,10,9,2),u2,votes1));
+            add(new Answer("Answer #2 ","",
+                    LocalDateTime.of(2019,01,10,9,2),u3,votes2));
+            add(new Answer("Answer #3 ","",
+                    LocalDateTime.of(2019,02,10,9,2),u4,votes3));
+        }};
+
+        List<Answer> ans2 = new ArrayList<Answer>(){{
+            add(new Answer("Answer #1 ","",
+                    LocalDateTime.of(2019,01,10,9,2),u2,votes2));
+            add(new Answer("Answer #2 ","",
+                    LocalDateTime.of(2019,01,10,9,2),u3,votes1));
+            add(new Answer("Answer #3 ","",
+                    LocalDateTime.of(2019,02,10,9,2),u4,votes3));
+            add(new Answer("Answer #4 ","",
+                    LocalDateTime.of(2019,02,10,9,2),u5,votes1));
+            add(new Answer("Answer #5 ","",
+                    LocalDateTime.of(2019,02,10,9,2),u5,votes1));
+            add(new Answer("Answer #6 ","",
+                    LocalDateTime.of(2019,02,10,9,2),u5,votes1));
         }};
 
         contentListU1.get(0).setAnswerList(ans1);
@@ -196,5 +196,21 @@ public class Main {
         System.out.println(contentListU4.get(1));
 
         System.out.println(Functions.ModerateRepeatedWordFormContent.apply(contentListU4.get(1)));
+        //System.out.println( Functions.questionsPerMonth.apply(usersList) );
+
+        //testing getUserByVotes
+        System.out.println("****\tGet Top Ten Users By Votes\t******");
+        System.out.println(Functions.getTopTenUsersByVote.apply(usersList));
+
+        //testing getUserByVotes
+        System.out.println("****\tGet Top Ten Tags\t******");
+        System.out.println(Functions.getKTags.apply(usersList,7));
+
+        //testing getUserByVotes
+        System.out.println("****\tGet Search\t******");
+        System.out.println(Functions.search.apply(usersList," search "));
+        //System.out.println(Functions.searchStrRegex.apply("binary search"));
+        //System.out.println(Functions.isFound.apply("body for binary search",Functions.searchStrRegex.apply("search")));
+
     }
 }

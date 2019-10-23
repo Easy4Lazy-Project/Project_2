@@ -40,4 +40,9 @@ public class User {
     public void setContentList(List<Content> contentList) {
         this.contentList = contentList;
     }
+
+    @Override
+    public String toString() {
+        return firstName;
+    }
 }
