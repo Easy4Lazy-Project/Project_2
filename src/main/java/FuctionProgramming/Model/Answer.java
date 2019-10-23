@@ -1,6 +1,7 @@
 package FuctionProgramming.Model;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Answer  {
@@ -8,7 +9,7 @@ public class Answer  {
     private  String tags;
     private LocalDateTime creationDate;
     User user;
-    List<Vote> voteList;
+    List<Vote> voteList = new ArrayList<Vote>();
 
     public Answer(String body,String tags, LocalDateTime creationDate, User user,  List<Vote> voteList) {
         this.body = body;
@@ -36,5 +37,9 @@ public class Answer  {
 
     public List<Vote> getVoteList() {
         return voteList;
+    }
+
+    public int getCreationMonth(){
+        return this.getCreationDate().getMonthValue();
     }
 }

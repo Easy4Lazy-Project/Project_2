@@ -25,4 +25,7 @@ public class Comment {
     public User getUser() {
         return user;
     }
+    public int getCreationMonth(){
+        return this.getCreationDate().getMonthValue();
+    }
 }

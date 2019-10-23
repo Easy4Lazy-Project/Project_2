@@ -5,6 +5,11 @@ import java.util.List;
 
 public class User {
     private String firstName ;
+
+    public LocalDateTime getCreationDate() {
+        return creationDate;
+    }
+
     private String lastName ;
     private String email ;
     private String password ;

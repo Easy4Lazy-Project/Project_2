@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9964b2cc-f15a-42d3-ab11-f86e493e948c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/FuctionProgramming/FP/FunctionsATest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -10,7 +9,23 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/FP/Functions.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/FP/Functions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/FP/triFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/FP/triFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Answer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Answer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Content.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Content.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Vote.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Vote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/FP/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/FP/Functions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FuctionProgramming/FP/FunctionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FuctionProgramming/FP/FunctionsTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,16 +54,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Arquillian JUnit Test Class" />
-        <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Lists" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,18 +77,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$USER_HOME$/GitKraken/Backend" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="FuctionProgramming.FP" />
+      <recent name="FuctionProgramming.Model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\pc\eclipse-workspace\FunctionProgramming" />
@@ -114,12 +127,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FunctionsTest.ModerateBadWordFromContentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AverageofAnswersPerUserPerMonthTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.FunctionsTest.ModerateBadWordFromContentTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.AverageofAnswersPerUserPerMonthTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -134,32 +147,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FunctionsTest.ModerateRepeatedWordFormContentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CommentsPerMonthTest.commentsPerMonthTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.FunctionsTest.ModerateRepeatedWordFormContentTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="FunctionsTest.questionsPerDateTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.FunctionsTest.questionsPerDateTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;FuctionProgramming.FP.CommentsPerMonthTest.commentsPerMonthTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -194,13 +187,21 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="All in Project_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'untitled1.test'" />
-        <item itemvalue="Gradle.FunctionsTest.ModerateRepeatedWordFormContentTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.FunctionsTest.ModerateBadWordFromContentTest" />
-        <item itemvalue="Gradle.FunctionsTest.questionsPerDateTest" />
+        <item itemvalue="Gradle.CommentsPerMonthTest.commentsPerMonthTest" />
+        <item itemvalue="Gradle.AverageofAnswersPerUserPerMonthTest" />
+        <item itemvalue="JUnit.All in Project_2" />
       </list>
     </recent_temporary>
   </component>
@@ -222,9 +223,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571685917143</updated>
-      <workItem from="1571685921962" duration="7764000" />
-      <workItem from="1571759073034" duration="18152000" />
-      <workItem from="1571842651156" duration="7387000" />
+      <workItem from="1571685921962" duration="6404000" />
     </task>
     <task id="LOCAL-00001" summary="first Commit">
       <created>1571687336391</created>
@@ -247,35 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571691764576</updated>
     </task>
-    <task id="LOCAL-00004" summary="Committing first function  by hedra done">
-      <created>1571692668182</created>
+    <task id="LOCAL-00004" summary="Working on CLI">
+      <created>1571857538305</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1571692668182</updated>
+      <updated>1571857538305</updated>
     </task>
-    <task id="LOCAL-00005" summary="Committing first function  by hedra done done">
-      <created>1571773754189</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1571773754189</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Committing first function  by hedra done more testing cases">
-      <created>1571790958761</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1571790958761</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Committing hedra and adelake">
-      <created>1571857440228</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1571857440228</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,13 +276,7 @@
     <MESSAGE value="first Commit" />
     <MESSAGE value="Committing first function and gitignore" />
     <MESSAGE value="Committing first function  Hedra" />
-    <MESSAGE value="Committing first function  by hedra done" />
-    <MESSAGE value="Committing first function  by hedra done done" />
-    <MESSAGE value="Committing first function  by hedra done more testing cases" />
-    <MESSAGE value="Committing hedra and adelake" />
-    <option name="LAST_COMMIT_MESSAGE" value="Committing hedra and adelake" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/untitled1$Tests_in__untitled1_test_.ic" NAME="Tests in 'untitled1.test' Coverage Results" MODIFIED="1571781329656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <MESSAGE value="Working on CLI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on CLI" />
   </component>
 </project>
