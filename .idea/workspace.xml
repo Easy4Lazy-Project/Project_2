@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9964b2cc-f15a-42d3-ab11-f86e493e948c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/FuctionProgramming/FP/FunctionsATest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/FP/Functions.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/FP/Functions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Content.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Model/Content.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/FP/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/FP/Functions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +66,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/GitKraken/Backend" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -79,16 +76,16 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="FuctionProgramming.FP" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\pc\eclipse-workspace\FunctionProgramming\src\main\java\FuctionProgramming\FP" />
-      <recent name="C:\Users\pc\eclipse-workspace\FunctionProgramming\src\main\java" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pc\eclipse-workspace\FunctionProgramming" />
+      <recent name="C:\Users\pc\eclipse-workspace\FunctionProgramming\src\main" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\pc\eclipse-workspace\FunctionProgramming" />
-      <recent name="C:\Users\pc\eclipse-workspace\FunctionProgramming\src\main" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pc\eclipse-workspace\FunctionProgramming\src\main\java\FuctionProgramming\FP" />
+      <recent name="C:\Users\pc\eclipse-workspace\FunctionProgramming\src\main\java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -103,7 +100,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.Tests in 'untitled1.test'">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FuctionProgramming.Main" />
       <module name="untitled1.main" />
@@ -227,7 +224,7 @@
       <updated>1571685917143</updated>
       <workItem from="1571685921962" duration="7764000" />
       <workItem from="1571759073034" duration="18152000" />
-      <workItem from="1571842651156" duration="3626000" />
+      <workItem from="1571842651156" duration="7387000" />
     </task>
     <task id="LOCAL-00001" summary="first Commit">
       <created>1571687336391</created>
@@ -271,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571790958761</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Committing hedra and adelake">
+      <created>1571857440228</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571857440228</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +301,8 @@
     <MESSAGE value="Committing first function  by hedra done" />
     <MESSAGE value="Committing first function  by hedra done done" />
     <MESSAGE value="Committing first function  by hedra done more testing cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Committing first function  by hedra done more testing cases" />
+    <MESSAGE value="Committing hedra and adelake" />
+    <option name="LAST_COMMIT_MESSAGE" value="Committing hedra and adelake" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/untitled1$Tests_in__untitled1_test_.ic" NAME="Tests in 'untitled1.test' Coverage Results" MODIFIED="1571781329656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
