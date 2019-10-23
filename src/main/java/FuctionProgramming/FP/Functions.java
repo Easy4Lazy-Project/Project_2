@@ -27,7 +27,7 @@ interface TriFunction <U,L,Z,K> {
 public class Functions  {
 
     //1-user per Month
-    //2-questions Per Month
+    //2-questions Per Date
 
     public static Function<List<User>,List<Pair<LocalDateTime,Long>>> questionsPerDate =
             (UserList)->  UserList.stream()

@@ -196,7 +196,6 @@ public class Main {
         System.out.println(contentListU4.get(1));
 
         System.out.println(Functions.ModerateRepeatedWordFormContent.apply(contentListU4.get(1)));
-        //System.out.println( Functions.questionsPerMonth.apply(usersList) );
 
         //testing getUserByVotes
         System.out.println("****\tGet Top Ten Users By Votes\t******");
