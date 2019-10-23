@@ -53,11 +53,20 @@ public class Question extends Content {
     }
 
     @Override
+    public void setBody(String body) {
+        super.body=body;
+    }
+
+    @Override
     public String toString() {
         return "Question{" +
                 "title='" + title + '\'' +
+                ", answerList=" + answerList +
+                ", commentList=" + commentList +
+                ", voteList=" + voteList +
                 ", body='" + body + '\'' +
                 ", tags='" + tags + '\'' +
+                ", creationDate=" + creationDate +
                 '}';
     }
 }

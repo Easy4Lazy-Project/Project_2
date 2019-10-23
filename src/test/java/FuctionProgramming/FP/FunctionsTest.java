@@ -2,19 +2,23 @@ package FuctionProgramming.FP;
 
 
 import FuctionProgramming.Model.*;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
+import org.junit.runner.RunWith;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 
 
 public class FunctionsTest {
     List<User> usersList = new ArrayList<>();
+    List<Content> contentListU1 = new ArrayList<>();
 
     @Before
     public void setUp() throws Exception {
@@ -187,30 +191,55 @@ public class FunctionsTest {
     }
 
     @Test
-    public void questionsPerMonthTest(){
+    public void questionsPerDateTest(){
 
-        String expected ="[Pair{key=2019-11-10T00:00, value=1}, Pair{key=2019-09-10T00:00, value=4}, Pair{key=2019-08-10T00:00, value=3}, Pair{key=2019-07-10T00:00, value=1}, Pair{key=2019-06-10T00:00, value=1}, Pair{key=2019-05-12T00:00, value=1}, Pair{key=2019-04-12T00:00, value=1}, Pair{key=2019-03-12T00:00, value=1}, Pair{key=2019-02-12T00:00, value=1}, Pair{key=2019-01-10T00:00, value=1}]";
-        assertEquals("Test get Question Answers ",Functions.questionsPerMonth.apply(usersList),expected);
+    //    String expected ="[Pair{key=2019-11-10T00:00, value=1}, Pair{key=2019-09-10T00:00, value=4}, Pair{key=2019-08-10T00:00, value=3}, Pair{key=2019-07-10T00:00, value=1}, Pair{key=2019-06-10T00:00, value=1}, Pair{key=2019-05-12T00:00, value=1}, Pair{key=2019-04-12T00:00, value=1}, Pair{key=2019-03-12T00:00, value=1}, Pair{key=2019-02-12T00:00, value=1}, Pair{key=2019-01-10T00:00, value=1}]";
+
+
+       assertEquals("questions Per Date ",Functions.questionsPerDate.apply(usersList).size(),10);
+        //Assert.assertTrue(true);
+
     }
 
     @Test
-    public void getTopTenUsersByVoteTest(){
+    public void ModerateBadWordFromContentTest(){
 
-        String expected ="[Pair{key=Adeleke, value=9}, Pair{key=Dany, value=9}, Pair{key=Ali, value=9}, Pair{key=Eduardo, value=7}]";
-        assertEquals("Test get Question Answers ",Functions.getTopTenUsersByVote.apply(usersList),expected);
+        User u1 = new User("Hedra","","hedra@mum.edu","12345",
+                LocalDateTime.of(2019,3,10,1,1), null);
+        Content c1=new Question(
+                "how to inicialize localdatetime in body",
+                "body for localdatetime",
+                "localdatetime",
+                LocalDateTime.of(2019,02,12,0,0),u1);
+        Set setA = new HashSet();
+        setA.add("body");
+
+      Content cTest=  Functions.ModerateBadWordFromContent.apply(c1, setA);
+
+
+        Assert.assertTrue(!cTest.getBody().equals(c1.getBody()));
+        Assert.assertTrue(cTest.getTitle().equals("how to inicialize localdatetime in"));
     }
 
-    @Test
-    public void getTopKTagsTest(){
-
-        String expected ="[localdatetime, spring, angular, hibernate, docker, binary java]";
-        assertEquals("Test get Question Answers ",Functions.getKTags.apply(usersList,7),expected);
-    }
 
     @Test
-    public void searchTest(){
+    public void ModerateRepeatedWordFormContentTest(){
+        User u1 = new User("Hedra","","hedra@mum.edu","12345",
+                LocalDateTime.of(2019,3,10,1,1), null);
+        Content c1=new Question(
+                "how @binary @hedra @hedra",
+                "body for @binary @binary search body",
+                "localdatetime",
+                LocalDateTime.of(2019,02,12,0,0),u1);
 
-        String expected ="[]";
-        assertEquals("Test search() ",Functions.search.apply(usersList,"[]"),expected);
+
+        Content cTest=  Functions.ModerateRepeatedWordFormContent.apply(c1);
+
+
+        Assert.assertTrue(!cTest.getBody().equals(c1.getBody()));
+        assertEquals("how @binary @hedra",cTest.getTitle());
+
+
+
     }
 }

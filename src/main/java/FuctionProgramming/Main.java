@@ -6,22 +6,23 @@ import FuctionProgramming.Model.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
 
     public static void main(String[] args) {
         //populate lists
 
-        User u1 = new User("Hedra","","hedra@mum.edu","12345",
-                LocalDateTime.of(2019,3,10,1,1), null);
-        User u2 = new User("Eduardo","","Eduardo@mum.edu","12345",
-                LocalDateTime.of(2019,5,10,1,1), null);
-        User u3 = new User("Adeleke","","Adeleke@mum.edu","12345",
-                LocalDateTime.of(2019,1,10,1,1), null);
-        User u4 = new User("Ali","","Ali@mum.edu","12345",
-                LocalDateTime.of(2019,7,10,1,1),null);
-        User u5 = new User("Dany","","Dany@mum.edu","12345",
-                LocalDateTime.of(2019,2,10,1,1),null);
+        User u1 = new User("Hedra", "", "hedra@mum.edu", "12345",
+                LocalDateTime.of(2019, 3, 10, 1, 1), null);
+        User u2 = new User("Eduardo", "", "Eduardo@mum.edu", "12345",
+                LocalDateTime.of(2019, 5, 10, 1, 1), null);
+        User u3 = new User("Adeleke", "", "Adeleke@mum.edu", "12345",
+                LocalDateTime.of(2019, 1, 10, 1, 1), null);
+        User u4 = new User("Ali", "", "Ali@mum.edu", "12345",
+                LocalDateTime.of(2019, 7, 10, 1, 1), null);
+        User u5 = new User("Dany", "", "Dany@mum.edu", "12345",
+                LocalDateTime.of(2019, 2, 10, 1, 1), null);
 
         List<Content> contentListU1 = new ArrayList<Content>();
 
@@ -59,17 +60,17 @@ public class Main {
                 "Question 1 user Eduardo",
                 "body for binary search",
                 "angular",
-                LocalDateTime.of(2019,6,10,0,0),u2));
+                LocalDateTime.of(2019, 6, 10, 0, 0), u2));
         contentListU2.add(new Question(
                 "Question 2 user Eduardo",
                 "body for binary search",
                 "angular",
-                LocalDateTime.of(2019,7,10,0,0),u2));
+                LocalDateTime.of(2019, 7, 10, 0, 0), u2));
         contentListU2.add(new Question(
                 "Question 3 user Eduardo",
                 "body for binary search",
                 "angular",
-                LocalDateTime.of(2019,8,10,0,0),u2));
+                LocalDateTime.of(2019, 8, 10, 0, 0), u2));
 
         List<Content> contentListU3 = new ArrayList<Content>();
 
@@ -77,12 +78,12 @@ public class Main {
                 "Question 1 user Adeleke",
                 "body for binary search",
                 "spring",
-                LocalDateTime.of(2019,8,10,0,0),u3));
+                LocalDateTime.of(2019, 8, 10, 0, 0), u3));
         contentListU3.add(new Question(
                 "Question 2 user Adeleke",
                 "body for binary search",
                 "spring",
-                LocalDateTime.of(2019,8,10,0,0),u3));
+                LocalDateTime.of(2019, 8, 10, 0, 0), u3));
 
         contentListU3.add(new Question(
                 "Question 3 user Adeleke",
@@ -94,15 +95,15 @@ public class Main {
 
         contentListU4.add(new Question(
                 "Question 1 user Ali",
-                "body for binary search",
+                "@heloo  heloo  heloo @heloo @heloo",
                 "hibernate",
-                LocalDateTime.of(2019,9,10,0,0),u4));
+                LocalDateTime.of(2019, 9, 10, 0, 0), u4));
 
         contentListU4.add(new Question(
                 "Question 2 user Ali",
-                "body for binary search",
+                "body for @binary @binary search body ",
                 "hibernate",
-                LocalDateTime.of(2019,11,10,0,0),u4));
+                LocalDateTime.of(2019, 11, 10, 0, 0), u4));
 
         List<Content> contentListU5 = new ArrayList<Content>();
 
@@ -110,13 +111,13 @@ public class Main {
                 "Question 1 user Dany",
                 "body for binary search",
                 "docker",
-                LocalDateTime.of(2019,9,10,0,0),u5));
+                LocalDateTime.of(2019, 9, 10, 0, 0), u5));
 
         contentListU5.add(new Question(
                 "Question 2 user Dany",
                 "body for binary search",
                 "docker",
-                LocalDateTime.of(2019,9,10,0,0),u5));
+                LocalDateTime.of(2019, 9, 10, 0, 0), u5));
 
 
         u1.setContentList(contentListU1);
@@ -181,9 +182,22 @@ public class Main {
 
         System.out.print("Test");
 
-       //System.out.println( Functions.questionsPerMonth.apply(usersList) );
+        System.out.println(Functions.questionsPerDate.apply(usersList).size());
 
-       //testing getUserByVotes
+        System.out.println("----------------------------------------------");
+
+        System.out.println(contentListU4.get(1));
+        System.out.println(Functions.ModerateBadWordFromContent.apply(contentListU4.get(1), Set.of("search", "H")));
+
+        System.out.println("----------------------------------------------");
+
+         System.out.println(Functions.ModerateRepeatedWord.apply("@heloo  heloo  heloo @heloo @heloo" ));
+
+        System.out.println(contentListU4.get(1));
+
+        System.out.println(Functions.ModerateRepeatedWordFormContent.apply(contentListU4.get(1)));
+
+        //testing getUserByVotes
         System.out.println("****\tGet Top Ten Users By Votes\t******");
         System.out.println(Functions.getTopTenUsersByVote.apply(usersList));
 
@@ -196,5 +210,6 @@ public class Main {
         System.out.println(Functions.search.apply(usersList," search "));
         //System.out.println(Functions.searchStrRegex.apply("binary search"));
         //System.out.println(Functions.isFound.apply("body for binary search",Functions.searchStrRegex.apply("search")));
+
     }
 }
