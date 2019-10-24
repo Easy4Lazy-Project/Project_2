@@ -13,10 +13,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 
-public class FunctionsTest {
+public class FunctionsTest_3_11_14 {
     List<User> usersList = new ArrayList<>();
     List<Content> contentListU1 = new ArrayList<>();
 
@@ -191,55 +191,49 @@ public class FunctionsTest {
     }
 
     @Test
-    public void questionsPerDateTest(){
+    public void getQuesFromUserListTest(){
+        String expected = "[Question{title='Binary Search in Java', answerList=[, , ], commentList=null, voteList=null, body='body for binary search', tags='binary java', creationDate=2019-01-10T00:00}, Question{title='how to inicialize localdatetime', answerList=[, , , , , ], commentList=null, voteList=null, body='body for localdatetime', tags='localdatetime', creationDate=2019-02-12T00:00}, Question{title='Question 3', answerList=null, commentList=null, voteList=null, body='body 3', tags='localdatetime', creationDate=2019-03-12T00:00}, Question{title='Question 4', answerList=null, commentList=null, voteList=null, body='body for 4', tags='localdatetime', creationDate=2019-04-12T00:00}, Question{title='Question 5', answerList=null, commentList=null, voteList=null, body='body for 5', tags='localdatetime', creationDate=2019-05-12T00:00}, Question{title='Question 1 user Eduardo', answerList=null, commentList=null, voteList=null, body='body for binary search', tags='angular', creationDate=2019-06-10T00:00}, Question{title='Question 2 user Eduardo', answerList=null, commentList=null, voteList=null, body='body for binary search', tags='angular', creationDate=2019-07-10T00:00}, Question{title='Question 3 user Eduardo', answerList=null, commentList=null, voteList=null, body='body for binary search', tags='angular', creationDate=2019-08-10T00:00}, Question{title='Question 1 user Adeleke', answerList=null, commentList=null, voteList=null, body='body for binary search', tags='spring', creationDate=2019-08-10T00:00}, Question{title='Question 2 user Adeleke', answerList=null, commentList=null, voteList=null, body='body for binary search', tags='spring', creationDate=2019-08-10T00:00}, Question{title='Question 3 user Adeleke', answerList=null, commentList=null, voteList=null, body='body for binary search', tags='spring', creationDate=2019-09-10T00:00}, Question{title='Question 1 user Ali', answerList=null, commentList=null, voteList=null, body='body for binary search', tags='hibernate', creationDate=2019-09-10T00:00}, Question{title='Question 2 user Ali', answerList=null, commentList=null, voteList=null, body='body for binary search', tags='hibernate', creationDate=2019-11-10T00:00}, Question{title='Question 1 user Dany', answerList=null, commentList=null, voteList=null, body='body for binary search', tags='docker', creationDate=2019-09-10T00:00}, Question{title='Question 2 user Dany', answerList=null, commentList=null, voteList=null, body='body for binary search', tags='docker', creationDate=2019-09-10T00:00}]";
+        assertEquals("getQuesFromUserListTest() ", expected,  Functions.getQuesFromUserList.apply(usersList).toString());
+    }
 
-    //    String expected ="[Pair{key=2019-11-10T00:00, value=1}, Pair{key=2019-09-10T00:00, value=4}, Pair{key=2019-08-10T00:00, value=3}, Pair{key=2019-07-10T00:00, value=1}, Pair{key=2019-06-10T00:00, value=1}, Pair{key=2019-05-12T00:00, value=1}, Pair{key=2019-04-12T00:00, value=1}, Pair{key=2019-03-12T00:00, value=1}, Pair{key=2019-02-12T00:00, value=1}, Pair{key=2019-01-10T00:00, value=1}]";
+    @Test
+    public void getVotesFromUserListTest(){
+        String expected = "[Vote{vote=1, user=Eduardo}, Vote{vote=1, user=Adeleke}, Vote{vote=1, user=Ali}, Vote{vote=1, user=Dany}, Vote{vote=-1, user=Eduardo}, Vote{vote=1, user=Adeleke}, Vote{vote=-1, user=Ali}, Vote{vote=1, user=Dany}, Vote{vote=1, user=Adeleke}, Vote{vote=1, user=Ali}, Vote{vote=1, user=Dany}, Vote{vote=-1, user=Eduardo}, Vote{vote=1, user=Adeleke}, Vote{vote=-1, user=Ali}, Vote{vote=1, user=Dany}, Vote{vote=1, user=Eduardo}, Vote{vote=1, user=Adeleke}, Vote{vote=1, user=Ali}, Vote{vote=1, user=Dany}, Vote{vote=1, user=Adeleke}, Vote{vote=1, user=Ali}, Vote{vote=1, user=Dany}, Vote{vote=1, user=Eduardo}, Vote{vote=1, user=Adeleke}, Vote{vote=1, user=Ali}, Vote{vote=1, user=Dany}, Vote{vote=1, user=Eduardo}, Vote{vote=1, user=Adeleke}, Vote{vote=1, user=Ali}, Vote{vote=1, user=Dany}, Vote{vote=1, user=Eduardo}, Vote{vote=1, user=Adeleke}, Vote{vote=1, user=Ali}, Vote{vote=1, user=Dany}]";
+        assertEquals("getVotesFromUserListTest() ", expected,  Functions.getVotesFromUserList.apply(usersList).toString());
+    }
 
+    @Test
+    public void getTopTenUsersByVoteTest(){
+        String expected ="[Pair{key=Adeleke, value=9}, Pair{key=Ali, value=9}, Pair{key=Dany, value=9}, Pair{key=Eduardo, value=7}]";
+        assertEquals("getTopTenUsersByVoteTest()  ",expected, Functions.getTopTenUsersByVote.apply(usersList).toString());
+       // assertTrue(Functions.getTopTenUsersByVote.apply(usersList).contains("Pair{key=Dany, value=9}"));
+    }
 
-       assertEquals("questions Per Date ",Functions.questionsPerDate.apply(usersList).size(),10);
-        //Assert.assertTrue(true);
+    @Test
+    public void getTopKTagsTest(){
+        String expected ="[localdatetime, spring, angular, hibernate, docker, binary java]";
+        assertEquals("getTopKTagsTest()  ",expected, Functions.getKTags.apply(usersList,7).toString());
 
     }
 
     @Test
-    public void ModerateBadWordFromContentTest(){
-
-        User u1 = new User("Hedra","","hedra@mum.edu","12345",
-                LocalDateTime.of(2019,3,10,1,1), null);
-        Content c1=new Question(
-                "how to inicialize localdatetime in body",
-                "body for localdatetime",
-                "localdatetime",
-                LocalDateTime.of(2019,02,12,0,0),u1);
-        Set setA = new HashSet();
-        setA.add("body");
-
-      Content cTest=  Functions.ModerateBadWordFromContent.apply(c1, setA);
-
-
-        Assert.assertTrue(!cTest.getBody().equals(c1.getBody()));
-        Assert.assertTrue(cTest.getTitle().equals("how to inicialize localdatetime in"));
+    public void searchTest(){
+        String expected = "[Question{title='how to inicialize localdatetime', answerList=[, , , , , ], commentList=null, voteList=null, body='body for localdatetime', tags='localdatetime', creationDate=2019-02-12T00:00}]";
+        //assertEquals("Test search() ",Functions.search.apply(usersList,"[]").toString(),expected);
+        assertEquals("Test search() ",expected,Functions.search(usersList,"ali").toString());
     }
 
+    @Test
+    public void searchStrRegexTest(){
+        String expected = "binary|search";
+
+        assertEquals("Test searchStrRegexTest() ",expected,Functions.searchStrRegex.apply("binary search"));
+    }
 
     @Test
-    public void ModerateRepeatedWordFormContentTest(){
-        User u1 = new User("Hedra","","hedra@mum.edu","12345",
-                LocalDateTime.of(2019,3,10,1,1), null);
-        Content c1=new Question(
-                "how @binary @hedra @hedra",
-                "body for @binary @binary search body",
-                "localdatetime",
-                LocalDateTime.of(2019,02,12,0,0),u1);
-
-
-        Content cTest=  Functions.ModerateRepeatedWordFormContent.apply(c1);
-
-
-        Assert.assertTrue(!cTest.getBody().equals(c1.getBody()));
-        assertEquals("how @binary @hedra",cTest.getTitle());
-
-
-
+    public void isFoundTest(){
+        boolean expected = true;
+        String textToSearch = "body for binary search";
+        assertEquals("Test isFoundTest() ", true,  Functions.isFound.apply(textToSearch, "binary|search"));
     }
 }

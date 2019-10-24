@@ -16,4 +16,12 @@ public class Vote {
     public User getUser() {
         return user;
     }
+
+    @Override
+    public String toString() {
+        return "Vote{" +
+                "vote=" + vote +
+                ", user=" + user +
+                '}';
+    }
 }

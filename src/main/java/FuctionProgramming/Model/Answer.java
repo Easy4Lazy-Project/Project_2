@@ -37,4 +37,14 @@ public class Answer  {
     public List<Vote> getVoteList() {
         return voteList;
     }
+
+    @Override
+    public int hashCode() {
+        return 31*12+5;
+    }
+
+    @Override
+    public String toString() {
+        return "";
+    }
 }

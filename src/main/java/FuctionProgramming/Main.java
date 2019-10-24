@@ -191,25 +191,31 @@ public class Main {
 
         System.out.println("----------------------------------------------");
 
-         System.out.println(Functions.ModerateRepeatedWord.apply("@heloo  heloo  heloo @heloo @heloo" ));
+         //System.out.println(Functions.ModerateRepeatedWord.apply("@heloo  heloo  heloo @heloo @heloo" ));
 
-        System.out.println(contentListU4.get(1));
+        //System.out.println(contentListU4.get(1));
 
-        System.out.println(Functions.ModerateRepeatedWordFormContent.apply(contentListU4.get(1)));
+        //System.out.println(Functions.ModerateRepeatedWordFormContent.apply(contentListU4.get(1)));
 
+        System.out.println("----------------------------------------------");
         //testing getUserByVotes
         System.out.println("****\tGet Top Ten Users By Votes\t******");
         System.out.println(Functions.getTopTenUsersByVote.apply(usersList));
 
+        System.out.println("----------------------------------------------");
         //testing getUserByVotes
         System.out.println("****\tGet Top Ten Tags\t******");
         System.out.println(Functions.getKTags.apply(usersList,7));
-
+        System.out.println("----------------------------------------------");
         //testing getUserByVotes
         System.out.println("****\tGet Search\t******");
-        System.out.println(Functions.search.apply(usersList," search "));
+        System.out.println(Functions.search(usersList,"ali"));
         //System.out.println(Functions.searchStrRegex.apply("binary search"));
         //System.out.println(Functions.isFound.apply("body for binary search",Functions.searchStrRegex.apply("search")));
+
+        //testing getQuesFromUserList
+        System.out.println("****\tgetQuesFromUserList\t******");
+        System.out.println(Functions.getQuesFromUserList.apply(usersList));
 
     }
 }

@@ -6,9 +6,7 @@ import FuctionProgramming.Model.User;
 import FuctionProgramming.Model.Vote;
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.regex.Pattern;
@@ -55,8 +53,9 @@ public class Functions  {
                     .stream()
                     .collect(Collectors.groupingBy(Vote::getUser, counting()))
                     .entrySet().stream()
-                    .sorted((u1,u2) -> (int) (u2.getValue() - u1.getValue()))
                     .map(u -> new Pair<User,Long>(u.getKey(),u.getValue()))
+                    .sorted((u1,u2) -> (int) (u2.getValue() - u1.getValue()))
+                    .sorted((u1,u2) -> (int) (u1.getKey().getFirstName().compareTo(u2.getKey().getFirstName())))
                     .limit(10)
                     .collect(Collectors.toList());
 
@@ -113,23 +112,30 @@ public class Functions  {
             .collect(groupingBy(Function.identity(), counting()))
                     .entrySet().stream()
                     .sorted((c1,c2)-> (int) (c2.getValue() - c1.getValue()))
-            .map(c -> c.getKey())
+            .map(Map.Entry::getKey)
             .limit(k)
             .collect(Collectors.toList());
     //12- Answer Per Month
     //13-Comment Per Month
     //14-Search
     // Search returns any possible search string
-    public static List<String> stopWords = Arrays.asList("of","the","we","are","[]","(",")");
-    public static BiFunction<List<User>, String, List<Content>> search = (users, searchString) ->
+    public static List<String> stopWords = Arrays.asList("of","the","we","are","[]","(",")",","," ");
+    public static List<Content> search(List<User> users, String searchStr){
+        String searchRegex = Optional.of(searchStrRegex.apply(searchStr)).orElse("|");
+        System.err.println("searchRegex: "+searchRegex);
+        if(searchRegex!=null && !searchRegex.equals("|") && !searchRegex.equals("")){
+            return Functions.searchFinder.apply(users,searchRegex);
+        }
+        return null;
+    }
+    public static Function<String, String> searchStrRegex = (searchStr) -> Stream.of(searchStr.split(" |[|]|<|>")).filter(w -> !stopWords.contains(w)).collect(Collectors.joining("|"));
+    public static BiFunction<String, String, Boolean> isFound = (strToSearch, searchStr) -> Pattern.compile(searchStr).matcher(strToSearch).find();
+    private static BiFunction<List<User>, String, List<Content>> searchFinder = (users, searchString) ->
             Functions.getQuesFromUserList.apply(users).stream()
-            .filter(q -> Functions.isFound.apply(q.getTitle(),Functions.searchStrRegex.apply(searchString)) ||
-                    Functions.isFound.apply(q.getBody(),Functions.searchStrRegex.apply(searchString)))
-           // .filter(q -> Functions.isFound.apply(q.getBody(),Functions.searchStrRegex.apply(searchString)))
+            .filter(q -> Functions.isFound.apply(q.getTitle(),searchString) ||
+                    Functions.isFound.apply(q.getBody(),searchString))
             .collect(Collectors.toList());
 
-    public static Function<String, String> searchStrRegex = (searchStr) -> Stream.of(searchStr.split(" ")).filter(w -> !stopWords.contains(w)).collect(Collectors.joining("|"));
-    public static BiFunction<String, String, Boolean> isFound = (strToSearch, searchStr) -> Pattern.compile(searchStr).matcher(strToSearch).find();
 
 
      //15-My Top K Questions

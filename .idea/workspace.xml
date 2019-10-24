@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9964b2cc-f15a-42d3-ab11-f86e493e948c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/FP/Functions.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/FP/Functions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FuctionProgramming/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/FP/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/FP/Functions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Model/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Model/Answer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Model/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FuctionProgramming/Model/Vote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FuctionProgramming/FP/FunctionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FuctionProgramming/FP/FunctionsTest_3_11_14.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,8 +132,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Gradle.Tests in 'untitled1.test'">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FuctionProgramming.Main" />
       <module name="untitled1.main" />
       <extension name="coverage">
@@ -170,11 +186,31 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Tests in 'untitled1.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests *" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'untitled1.test'" />
         <item itemvalue="Gradle.FunctionsTest" />
         <item itemvalue="Gradle.FunctionsTest.getTopTenUsersByVoteTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
